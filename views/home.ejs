@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+    <% for(let i = 0; i < posts.length; i++) { %>
+        <h1>
+            <a href=<%="/posts/" + i%>  style="text-decoration: none; color: #333;">
+            <%= posts[i].title %>
+        </a>
+        </h1>
+        <p>
+            <%= posts[i].content.substring(0, 300) + ' ...' %>
+                <a href=<%='/posts/' + i %>>
+                read more
+            </a>
+
+        </p>
+        <% } %>
+
+
+
+
+            <%- include('partials/footer') %>
